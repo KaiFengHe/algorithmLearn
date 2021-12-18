@@ -12,8 +12,7 @@ public class ReversePolishNotation {
 
     public static int caculate(String[] notation) {
         Stack<Integer> operations = new Stack<>();
-        for (int i = 0; i < notation.length; i++) {
-            String curStr = notation[i];
+        for (String curStr : notation) {
             Integer result;
             Integer o1;
             Integer o2;
