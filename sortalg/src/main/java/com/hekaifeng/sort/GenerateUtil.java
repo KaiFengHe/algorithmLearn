@@ -1,5 +1,7 @@
 package com.hekaifeng.sort;
 
+import java.util.Arrays;
+import java.util.List;
 import java.util.Random;
 
 public class GenerateUtil {
@@ -20,6 +22,10 @@ public class GenerateUtil {
         Integer[] arr = new Integer[length];
         for (int i = 0; i < length; i++) {
             int randomInt = (int) (random.nextFloat() * offset + start);
+            List<Integer> integers = Arrays.asList(arr);
+            while (integers.contains(randomInt)) {
+                randomInt = (int) (random.nextFloat() * offset + start);
+            }
             arr[i] = randomInt;
         }
         return arr;
