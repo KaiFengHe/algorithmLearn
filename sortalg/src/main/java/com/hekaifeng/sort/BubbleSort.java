@@ -15,7 +15,7 @@ public class BubbleSort {
      *
      * @param arr
      */
-    public static void sort(int[] arr) {
+    public static void sort(Integer[] arr) {
         // 比较次数控制
         for (int i = arr.length - 1; i > 0; i--) {
             // 每次从0开始比较,比较次数随着比较越来越少
@@ -29,9 +29,9 @@ public class BubbleSort {
 
     public static void main(String[] args) {
 
-        int[] arr = GenerateUtil.generateArr();
+        Integer[] arr = GenerateUtil.generateArr();
         System.out.println(Arrays.toString(arr));
-        int[] tmpArr = Arrays.copyOf(arr, arr.length);
+        Integer[] tmpArr = Arrays.copyOf(arr, arr.length);
         System.out.println(Arrays.toString(tmpArr));
         sort(arr);
         System.out.println(Arrays.toString(arr));

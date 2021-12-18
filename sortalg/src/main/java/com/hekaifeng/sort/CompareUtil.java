@@ -1,7 +1,7 @@
 package com.hekaifeng.sort;
 
 public class CompareUtil {
-    public static boolean compareArr(int[] tmpArr, int[] arr) {
+    public static boolean compareArr(Integer[] tmpArr, Integer[] arr) {
 
         if (tmpArr == null && arr == null) {
             System.out.println("都为空相等");
@@ -24,7 +24,7 @@ public class CompareUtil {
         }
 
         for (int i = 0; i < arr.length - 1; i++) {
-            if (tmpArr[i] != arr[i]) {
+            if (tmpArr[i].compareTo(arr[i]) != 0) {
                 System.out.println("不相等，fuck");
                 return false;
             }

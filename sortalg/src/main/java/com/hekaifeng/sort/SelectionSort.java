@@ -7,9 +7,9 @@ public class SelectionSort {
 
     public static void main(String[] args) {
         for (int i = 0; i < 5000; i++) {
-            int[] arr = GenerateUtil.generateArr(100, 100, 200);
+            Integer[] arr = GenerateUtil.generateArr(100, 100, 200);
             System.out.println(Arrays.toString(arr));
-            int[] tmpArr = Arrays.copyOf(arr, arr.length);
+            Integer[] tmpArr = Arrays.copyOf(arr, arr.length);
             System.out.println(Arrays.toString(tmpArr));
             sort(arr);
             System.out.println(Arrays.toString(arr));
@@ -26,7 +26,7 @@ public class SelectionSort {
      *
      * @param arr
      */
-    private static void sort(int[] arr) {
+    private static void sort(Integer[] arr) {
         for (int i = 0; i < arr.length - 1; i++) {
             // 默认第0个元素为最小元素，后续递增
             int minIndex = i;

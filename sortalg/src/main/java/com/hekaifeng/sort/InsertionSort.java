@@ -6,9 +6,9 @@ public class InsertionSort {
 
     public static void main(String[] args) {
         for (int i = 0; i < 5000; i++) {
-            int[] arr = GenerateUtil.generateArr(100, 100, 100);
+            Integer[] arr = GenerateUtil.generateArr(100, 100, 100);
             System.out.println(Arrays.toString(arr));
-            int[] copyArr = Arrays.copyOf(arr, arr.length);
+            Integer[] copyArr = Arrays.copyOf(arr, arr.length);
             System.out.println(Arrays.toString(copyArr));
 
             sort(arr);
@@ -28,7 +28,7 @@ public class InsertionSort {
      *
      * @param arr
      */
-    private static void sort(int[] arr) {
+    private static void sort(Integer[] arr) {
         // 假定第一个位置已有序，依次递增从第二个元素开始插入
         for (int i = 1; i < arr.length; i++) {
             // 后面元素依次和前面的元素倒序比较,所以内存循环从大到小
